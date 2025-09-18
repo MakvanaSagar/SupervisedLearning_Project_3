@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Marks Prediction</title>
+</head>
+<body>
+    <h2>Student Marks Prediction (Supervised Learning)</h2>
+    <form method="POST" action="/predict">
+        <label>Last Semester SPI:</label>
+        <input type="text" name="spi" required><br><br>
+
+        <label>Test Exam Score:</label>
+        <input type="text" name="test" required><br><br>
+
+        <label>Assembly Score:</label>
+        <input type="text" name="assembly" required><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
